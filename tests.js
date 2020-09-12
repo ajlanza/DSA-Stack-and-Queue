@@ -1,4 +1,5 @@
 const Stack = require('./stack');
+const { peek } = require('./stackHelp');
 
 function starTrek(){
   const starTrek = new Stack();
@@ -11,3 +12,5 @@ function starTrek(){
 }
 
 console.log(starTrek());
+//  console.log(peek());
+console.log(peek(starTrek()));

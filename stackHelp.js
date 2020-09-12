@@ -6,4 +6,12 @@ function peek(stack) {
   }
   return stack.top.data;
 }
-module.exports = { peek }
+
+function isEmpty(stack) {
+  if(stack.top === null) {
+    return true;
+  }
+  return false;
+}
+
+module.exports = { peek, isEmpty }

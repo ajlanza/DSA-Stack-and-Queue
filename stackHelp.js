@@ -14,4 +14,14 @@ function isEmpty(stack) {
   return false;
 }
 
-module.exports = { peek, isEmpty }
+function display(stack) {
+  if(isEmpty(stack)){
+    return 'Bad Stack';
+  }
+  let node = stack.top;
+  while(node !== null){
+    console.log(node.data);
+    node = node.next;
+  }
+}
+module.exports = { peek, isEmpty, display }

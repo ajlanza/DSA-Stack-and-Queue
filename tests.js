@@ -1,5 +1,5 @@
 const Stack = require('./stack');
-const { peek, isEmpty } = require('./stackHelp');
+const { peek, isEmpty, display } = require('./stackHelp');
 
 function starTrek(){
   const starTrek = new Stack();
@@ -7,6 +7,7 @@ function starTrek(){
   starTrek.push('Spock');
   starTrek.push('McCoy');
   starTrek.push('Scotty');
+  starTrek.pop();
 
   return starTrek;
 }
@@ -21,3 +22,4 @@ console.log(starTrek());
 console.log(peek(starTrek()));
 console.log(isEmpty(starTrek()));
 console.log(isEmpty(empty()));
+display(starTrek());

@@ -1,5 +1,5 @@
 const Queue = require('./queue');
-const { peek } = require('./queueHelp');
+const { peek, isEmpty } = require('./queueHelp');
 
 function starTrek() {
   const starTrek = new Queue();
@@ -13,3 +13,6 @@ function starTrek() {
 }
 
 console.log(peek(starTrek()));
+console.log(peek('bad queue'))
+console.log(isEmpty(starTrek()));
+console.log(isEmpty('bad queue'));

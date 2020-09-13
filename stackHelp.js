@@ -24,4 +24,20 @@ function display(stack) {
     node = node.next;
   }
 }
-module.exports = { peek, isEmpty, display }
+
+function is_palindrome(s) {
+  s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+  let reverse = new Stack();
+  for(let i = 0; i < s.length; i++){
+    reverse.push(s[i]);
+  }
+  for(let j = 0; j < s.length; j++){
+    if(s[j] === reverse.pop()){
+        continue;
+    } else {
+      return false;
+    }
+  }
+  return true
+}
+module.exports = { peek, isEmpty, display, is_palindrome }

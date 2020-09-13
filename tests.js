@@ -1,5 +1,5 @@
 const Stack = require('./stack');
-const { peek, isEmpty, display } = require('./stackHelp');
+const { peek, isEmpty, display, is_palindrome } = require('./stackHelp');
 
 function starTrek(){
   const starTrek = new Stack();
@@ -23,3 +23,9 @@ console.log(peek(starTrek()));
 console.log(isEmpty(starTrek()));
 console.log(isEmpty(empty()));
 display(starTrek());
+console.log(is_palindrome("dad"));
+console.log(is_palindrome("A man, a plan, a canal: Panama"));
+console.log(is_palindrome("1001"));
+console.log(is_palindrome("Tauhida"));
+console.log(is_palindrome("racecaR"));
+console.log(is_palindrome("No way!"));

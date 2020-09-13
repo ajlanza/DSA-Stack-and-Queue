@@ -59,4 +59,16 @@ function parens(string){
   }
   return `Missing ")" for "(" at position ${myStack.pop()}`;
 }
-module.exports = { peek, isEmpty, display, is_palindrome, parens }
+
+function sortStack(originalStack){
+  let tempStack = new Stack();
+  while(!isEmpty(originalStack)){
+    let temp = originalStack.pop();
+    while(!isEmpty(tempStack) && peek(tempStack) < temp){
+      originalStack.push(tempStack.pop());
+    }
+    tempStack.push(temp);
+  }
+  return tempStack;
+}
+module.exports = { peek, isEmpty, display, is_palindrome, parens, sortStack }

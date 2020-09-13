@@ -48,4 +48,4 @@ function sortThis(){
 // console.log(parens("6+5(3-5))"));
 // console.log(parens("(6+5(3-5))+18/h)"));
 // console.log(parens("6+(5(3-(5))+18/h"));
-display(sortStack(sortThis()));
+// display(sortStack(sortThis()));

@@ -40,4 +40,23 @@ function is_palindrome(s) {
   }
   return true
 }
-module.exports = { peek, isEmpty, display, is_palindrome }
+
+function parens(string){
+  let myStack = new Stack();
+  for(let i = 0; i < string.length; i++){
+    if(string[i] === '('){
+      myStack.push(i)
+    }
+    if(string[i] === ')'){
+      if(isEmpty(myStack)){
+        return `Missing "(" for ")" at position ${i}.`
+      }
+      myStack.pop();
+    }
+  }
+  if(isEmpty(myStack)){
+    return `All parentheses have matches.`;
+  }
+  return `Missing ")" for "(" at position ${myStack.pop()}`;
+}
+module.exports = { peek, isEmpty, display, is_palindrome, parens }

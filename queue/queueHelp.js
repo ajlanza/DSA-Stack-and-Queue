@@ -14,4 +14,16 @@ function isEmpty(q) {
   return false;
 }
 
-module.exports = { peek, isEmpty };
+function display(q){
+  if(isEmpty(q)){
+    return console.log('Bad queue.')
+  }
+  let currNode = q.first;
+  while(currNode.next !== null){
+    console.log(currNode.value);
+    currNode = currNode.next;    
+  }
+  console.log(currNode.value);
+}
+
+module.exports = { peek, isEmpty, display };

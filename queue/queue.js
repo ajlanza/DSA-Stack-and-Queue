@@ -22,9 +22,9 @@ class Queue{
     this.last = node;
   }
 
-  dequeue(data){
+  dequeue(){
     if(this.first === null){
-      return;
+      return null;
     }
     const node = this.first;
     this.first = this.first.next
